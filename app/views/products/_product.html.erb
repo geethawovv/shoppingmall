@@ -1,0 +1,5 @@
+<div class="col-md-4">
+  <h4><%= link_to product.name, product_path(product) %></h4>
+  <p><%= product.site.name %></p>
+  <p><%= product.sale_time.strftime("%A,%b %d,%Y at %I:%m %p") %></p>
+</div>

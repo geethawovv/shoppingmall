@@ -1,0 +1,6 @@
+<%= render partial:'products/product', locals: {product:@product} %>
+<% if current_user.favourites.include?(@product) %>
+  <%= link_to "unfavourite", favourite_product_path(@product,type: "unfavourite"),method: :post %>
+<% else %>
+  <%= link_to "favourite", favourite_product_path(@product,type: "favourite"),method: :post %>
+<% end %>

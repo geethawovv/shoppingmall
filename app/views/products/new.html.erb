@@ -1,0 +1,5 @@
+<%= form_for @product,method: :post do |f| %>
+  <%= f.text_field :name %>
+  <%= f.time_select :sale_time, default: {hour: 9, min: 0} %>
+  <%= f.submit "create" %>
+<% end %>

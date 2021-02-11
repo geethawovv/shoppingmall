@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html" charset="utf-8" http-equiv="content-Type"/>
+</head>
+<body>
+<p>hello your favourite <%= @product.name %> available
+  <span>from <%= @product.site.name %></span>
+  <span>at <%= @product.sale_time.strftime("%A,%b %d,%Y %I:%m %p") %></span>
+</p>
+</body>
+</html>

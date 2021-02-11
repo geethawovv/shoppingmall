@@ -1,0 +1,25 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-collapse collapsed" 
+      data-toggle="navbar" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to "Shopper",products_path,class: 'navbar-brand' %>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="nav navbar-nav pull-right">
+        <% if user_signed_in? %>
+          <li class="navbar-brand"><%= current_user.name %></li>
+          <li><%= link_to "logout",destroy_user_session_path,method: :delete %></li>
+        <% else %>
+          <li><%= link_to "login",new_user_session_path %></li>
+          <li><%= link_to "signup",new_user_registration_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
